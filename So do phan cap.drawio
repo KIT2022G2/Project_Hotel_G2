@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-10T04:28:35.611Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="VjvDMuRJ4MD2v05ydkv4" version="20.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-10T04:28:50.569Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="wwCs-VD16lWuYmiBw1Hy" version="20.2.3" type="github">
   <diagram name="Page-1" id="64c3da0e-402f-94eb-ee01-a36477274f13">
     <mxGraphModel dx="2591" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -325,7 +325,7 @@
         <mxCell id="3OECvHZvD5KFs6jY7Gat-236" value="Thống kê doanh thu theo tháng" style="whiteSpace=wrap;rounded=1;fillColor=#999999;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="1219.9999999999993" y="413.0000000000001" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="3OECvHZvD5KFs6jY7Gat-241" value="Xem thông tin đã đặt" style="whiteSpace=wrap;rounded=1;fillColor=#999999;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=0" vertex="1" parent="1">
+        <mxCell id="3OECvHZvD5KFs6jY7Gat-241" value="Thuê phòng" style="whiteSpace=wrap;rounded=1;fillColor=#999999;strokeColor=none;shadow=1;fontColor=#FFFFFF;fontStyle=0" vertex="1" parent="1">
           <mxGeometry x="59.999999999999716" y="660.0000000000001" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
