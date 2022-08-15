@@ -1,4 +1,4 @@
-package com.edu.multicampus.main;
+package com.edu.multicampus.Main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
