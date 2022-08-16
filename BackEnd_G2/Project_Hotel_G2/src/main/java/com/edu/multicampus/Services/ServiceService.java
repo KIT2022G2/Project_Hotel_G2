@@ -1,13 +1,12 @@
 package com.edu.multicampus.Services;
 
 import com.edu.multicampus.Model.Service;
-
+import java.util.List;
 
 public interface ServiceService {
+	List<Service> findAllService();
 	
 	Service getServiceById(long id);
-	
-	void saveService(Service service);
 	
 	void addService(Service service, long id);
 	
