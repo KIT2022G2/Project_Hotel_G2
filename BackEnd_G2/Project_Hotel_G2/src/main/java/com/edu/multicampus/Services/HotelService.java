@@ -11,6 +11,6 @@ public interface HotelService {
 	int addHotel(Hotel hotel);
 	int deleteHotelById (long id);
 	Hotel getHotelById (long id);
-	Page<Hotel> getAllCard(int pageNo, int pageSize);
+	Page<Hotel> findHotelPaginated(int pageNo, int pageSize);
 	int updateHotelById (long id, Hotel hotel);
 }
