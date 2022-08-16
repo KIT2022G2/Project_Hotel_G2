@@ -4,10 +4,14 @@ import java.util.List;
 import javax.persistence.*;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 @Entity
 @Table(name="room")
+@Getter
+@Setter
 public class Room {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)

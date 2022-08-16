@@ -69,7 +69,7 @@ public class HotelServiceImpl implements HotelService {
 	            found.get().setRoom(hotel.getRoom());
 	            found.get().setStaff(hotel.getStaff());
 	            found.get().setHotelrating(hotel.getHotelrating());
-	            hotelRepository.save(hotel);
+	            hotelRepository.save(found.get());
 	            return 1;
 	        }
 		return 0;
