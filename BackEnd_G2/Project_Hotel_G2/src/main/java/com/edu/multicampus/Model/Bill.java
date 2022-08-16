@@ -1,5 +1,5 @@
 package com.edu.multicampus.Model;
-
+import lombok.Data;
 import java.sql.Date;
 
 import javax.persistence.CascadeType;
@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+@Data
 @Entity
 @Table(name="bill")
 public class Bill {
@@ -23,7 +24,7 @@ public class Bill {
     private Date checkinDate;
 
     @Column(columnDefinition = "DATE")
-    private Date datetime;
+    private Date dateTime;
 
     @Column(columnDefinition = "DATE")
     private Date checkoutDate;
@@ -32,10 +33,10 @@ public class Bill {
     private boolean status;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codestaff",nullable=false,referencedColumnName="codestaff")
-    private Room room;
+    @JoinColumn(name="code_staff",nullable=false)
+    private Staff staff;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codecustomer",nullable=false,referencedColumnName="codecustomer")
+    @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

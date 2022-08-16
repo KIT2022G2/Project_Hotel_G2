@@ -3,10 +3,14 @@ import java.sql.Date;
 
 import javax.persistence.*;
 
+import lombok.Data;
+
+@Data
 @Entity
-@Table(name="use")
-public class Use {
-    @Id
+@Table(name="uses")
+public class Uses {
+  
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long useId;
     
@@ -14,10 +18,11 @@ public class Use {
     private Date time;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="coderoom",nullable=false,referencedColumnName="coderoom")
+    @JoinColumn(name="code_room",nullable=false)
     private Room room;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codeservice",nullable=false,referencedColumnName="codeservice")
+    @JoinColumn(name="code_service",nullable=false)
     private Service service;
+    
 }

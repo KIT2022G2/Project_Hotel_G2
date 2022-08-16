@@ -2,6 +2,10 @@ package com.edu.multicampus.Model;
 import java.util.List;
 
 import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="room")
 public class Room {
@@ -19,22 +23,20 @@ public class Room {
 	
 	private String roomState;
 	
-	@Column(name="coderoom", nullable=false, unique=true)
-	private String codeRoom;
 	
-	@OneToMany(mappedBy="borrow")
-	private List<Borrow> borrow;
+	@OneToMany(mappedBy="room")
+	private List<Borrows> borrow;
 	
-	@OneToMany(mappedBy="roomrating")
+	@OneToMany(mappedBy="room")
 	private List<RoomRating> roomrating;
 	
-	@OneToMany(mappedBy="order")
-	private List<Order> order;
+	@OneToMany(mappedBy="room")
+	private List<Orders> order;
 	
-	@OneToMany(mappedBy="use")
-	private List<Use> use;
+	@OneToMany(mappedBy="room")
+	private List<Uses> use;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="hotelId", nullable=false)
+	@JoinColumn(name="code_hotel", nullable=false)
 	Hotel hotel;
 }

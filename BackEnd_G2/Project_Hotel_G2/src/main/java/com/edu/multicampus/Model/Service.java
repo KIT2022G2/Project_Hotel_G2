@@ -2,6 +2,10 @@ package com.edu.multicampus.Model;
 import java.util.List;
 
 import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="service")
 public class Service {
@@ -17,6 +21,7 @@ public class Service {
     
     private int total;
     
-    @OneToMany(mappedBy="use")
-    private List<Use> use;
+    @OneToMany(mappedBy="service")
+    private List<Uses> use;
+    
 }
