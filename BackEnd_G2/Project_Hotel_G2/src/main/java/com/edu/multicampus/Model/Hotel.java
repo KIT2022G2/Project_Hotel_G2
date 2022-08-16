@@ -2,6 +2,10 @@ package com.edu.multicampus.Model;
 import java.util.List;
 
 import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="hotel")
 public class Hotel {
@@ -15,13 +19,12 @@ public class Hotel {
 	@Column(name="hotellocation",nullable=false)
 	private String hotelLocation;
 	
-	@Column(name="codehotel",nullable =true, unique=true)
-	private String codeHotel;
-	
-	@OneToMany(mappedBy="hotelrating")
+	@OneToMany(mappedBy="hotel")
 	private List<HotelRating> hotelrating;
 	
-	@OneToMany(mappedBy="room")
+	@OneToMany(mappedBy="hotel")
 	private List<Room> room;
 	
+	@OneToMany(mappedBy="hotel")
+	private List<Staff> staff;
 }

@@ -1,42 +1,37 @@
 package com.edu.multicampus.Model;
-import lombok.Data;
 import java.sql.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import lombok.Data;
 
 @Data
 @Entity
-@Table(name="bill")
-public class Bill {
-    @Id
+@Table(name="borrow")
+public class Borrows {
+  
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long billId;
+    private Long borrowId;
     
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date checkinDate;
 
     @Column(columnDefinition = "DATE")
-    private Date dateTime;
+    private Date datetime;
 
     @Column(columnDefinition = "DATE")
     private Date checkoutDate;
-    
+
     @Column(columnDefinition = "boolean default false")
     private boolean status;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="code_staff",nullable=false)
-    private Staff staff;
+    @JoinColumn(name="code_room_borrow",nullable=false)
+    private Room room;
     
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
+   
 }

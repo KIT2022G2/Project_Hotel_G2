@@ -1,6 +1,10 @@
 package com.edu.multicampus.Model;
 
 import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="hotelrating")
 public class HotelRating {
@@ -9,10 +13,10 @@ public class HotelRating {
     private Long hotelratingId;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codehotel",nullable=false,referencedColumnName="codehotel")
+    @JoinColumn(name="code_hotel",nullable=false)
     private Hotel hotel;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codecustomer",nullable=false,referencedColumnName="codecustomer")
+    @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

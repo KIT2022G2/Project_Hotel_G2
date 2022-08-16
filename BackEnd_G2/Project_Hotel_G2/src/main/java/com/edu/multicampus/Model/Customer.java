@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+@Data
 @Entity
 @Table(name="customer")
 public class Customer {
@@ -30,21 +32,20 @@ public class Customer {
 	@Column(name="customerpassword",nullable=false)
 	private String customerPassword;
 	
-	@Column(name="codecustomer",nullable=false,unique=true)
-	private String codeCustomer;
+
+	@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
+	private List<Borrows> borrow;
+	
+
+	@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
+	private List<Orders> order;
 	
 	@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
-	private List<Borrow> borrow;
-	
-	@OneToMany(mappedBy="order", cascade = CascadeType.ALL)
-	private List<Order> order;
-	
-	@OneToMany(mappedBy="hotelrating", cascade = CascadeType.ALL)
 	private List<HotelRating> hotelrating;
 	
-	@OneToMany(mappedBy="roomrating", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
 	private List<RoomRating> roomrating;
 	
-	@OneToMany(mappedBy="bill", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
 	private List<Bill> bill;
 }

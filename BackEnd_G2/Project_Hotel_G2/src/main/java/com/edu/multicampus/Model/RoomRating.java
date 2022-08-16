@@ -7,6 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name="roomrating")
 public class RoomRating {
@@ -14,11 +18,13 @@ public class RoomRating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long roomratingId;
     
+    private String rating;
+    
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="coderoom",nullable=false,referencedColumnName="coderoom")
+    @JoinColumn(name="code_room",nullable=false)
     private Room room;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="codecustomer",nullable=false,referencedColumnName="codecustomer")
+    @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }
