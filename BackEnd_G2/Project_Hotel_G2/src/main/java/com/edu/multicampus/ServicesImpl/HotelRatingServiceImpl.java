@@ -43,6 +43,7 @@ public class HotelRatingServiceImpl implements HotelRatingService {
 			h.setHotelratingId(hotelRating.getHotelratingId());
 			h.setHotel(hotelRating.getHotel());
 			h.setCustomer(hotelRating.getCustomer());
+		
 			hotelratingRepository.save(h);
 		}else {
 			throw new RuntimeException("HotelRating not found");

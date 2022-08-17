@@ -1,5 +1,10 @@
 package com.edu.multicampus.Model;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.sql.Date;
 
 import javax.persistence.CascadeType;
@@ -14,6 +19,10 @@ import javax.persistence.Table;
 
 @Data
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="bill")
 public class Bill {
     @Id

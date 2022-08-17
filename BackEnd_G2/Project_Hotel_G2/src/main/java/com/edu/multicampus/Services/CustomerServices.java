@@ -13,10 +13,9 @@ public class CustomerServices {
 	public interface CustomerService {
 	    List<Customer> getAllCustomer();
 
-	    Page<Customer> getAllCustomerByPage(int pageNo, int pageSize);
 	    Optional<Customer> getCustomerById(long id);
-	    int addCustomer(Customer customer);
-	    int updateCustomer(long id, Customer customer);
-	    int deleteCustomer(long id);
+	    void addCustomer(Customer customer);
+	    void updateCustomer(long id, Customer customer);
+	    void deleteCustomer(long id);
 	}
 }
