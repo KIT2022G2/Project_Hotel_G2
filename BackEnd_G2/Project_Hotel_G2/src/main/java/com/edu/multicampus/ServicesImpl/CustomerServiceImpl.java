@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.edu.multicampus.Model.Customer;
 import com.edu.multicampus.Repository.CustomerRepository;
-import com.edu.multicampus.Services.CustomerService.CustomerServices;
+import com.edu.multicampus.Services.CustomerService;
 
-public class CustomerServiceImpl implements CustomerServices{
+@Service
+public class CustomerServiceImpl implements CustomerService{
 	@Autowired
 	private CustomerRepository customerRepository;
 	@Override
