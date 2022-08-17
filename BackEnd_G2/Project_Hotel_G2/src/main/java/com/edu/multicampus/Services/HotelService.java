@@ -8,6 +8,7 @@ import com.edu.multicampus.Model.Hotel;
 
 public interface HotelService {
 	List<Hotel> getAllHotels();
+	
 	int addHotel(Hotel hotel);
 	int deleteHotelById (long id);
 	Hotel getHotelById (long id);
