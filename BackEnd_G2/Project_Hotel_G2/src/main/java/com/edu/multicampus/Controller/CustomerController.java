@@ -1,8 +1,8 @@
 package com.edu.multicampus.Controller;
 
 import com.edu.multicampus.Model.Customer;
-import com.edu.multicampus.Services.CustomerServices;
-import com.edu.multicampus.Services.CustomerServices.CustomerService;
+import com.edu.multicampus.Services.CustomerService;
+import com.edu.multicampus.Services.CustomerService.CustomerService;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.edu.multicampus.Model.Customer;
 import com.edu.multicampus.Repository.CustomerRepository;
-import com.edu.multicampus.Services.CustomerServices.CustomerService;
+import com.edu.multicampus.Services.CustomerService.CustomerServices;
 
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerServices{
 	@Autowired
 	private CustomerRepository customerRepository;
 	@Override
@@ -52,7 +52,7 @@ public class CustomerServiceImpl implements CustomerService{
 		if(optional.isPresent()) {
 			this.customerRepository.deleteById(id);
 		}else {
-			throw new RuntimeException("Bill not found");
+			throw new RuntimeException("Customer not found");
 		}
 	}
 

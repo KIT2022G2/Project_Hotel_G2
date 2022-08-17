@@ -8,9 +8,9 @@ import org.springframework.data.domain.Page;
 import com.edu.multicampus.Model.Customer;
 
 
-public class CustomerServices {
+public class CustomerService {
 
-	public interface CustomerService {
+	public interface CustomerServices {
 	    List<Customer> getAllCustomer();
 
 	    Optional<Customer> getCustomerById(long id);
