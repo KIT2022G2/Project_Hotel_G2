@@ -14,11 +14,8 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
     
-   @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
+    @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date arriveDate;
-
-    @Column(columnDefinition = "DATE")
-    private Date dateTime;
 
     @Column(columnDefinition = "DATE")
     private Date leaveDate;
@@ -26,11 +23,11 @@ public class Orders {
     @Column(columnDefinition = "boolean default false")
     private boolean status;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_room_order",nullable=false)
     private Room room;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

@@ -46,10 +46,9 @@ public class HotelServiceImpl implements HotelService {
 	}
 
 	@Override
-	public Hotel getHotelById(long id) {
+	public Optional<Hotel> getHotelById(long id) {
 		// TODO Auto-generated method stub
-		 Optional<Hotel> found = hotelRepository.findById(id);
-		return found.get();
+			return hotelRepository.findById(id);
 	}
 
 	@Override
@@ -66,13 +65,17 @@ public class HotelServiceImpl implements HotelService {
 		 if(found.isPresent()){
 	            found.get().setHotelLocation(hotel.getHotelLocation());
 	            found.get().setHotelName(hotel.getHotelName());
-	            found.get().setRoom(hotel.getRoom());
-	            found.get().setStaff(hotel.getStaff());
-	            found.get().setHotelrating(hotel.getHotelrating());
 	            hotelRepository.save(found.get());
 	            return 1;
 	        }
 		return 0;
 	}
+
+	@Override
+	public List<Hotel> getAllHotelsByName(String hotelname) {
+		// TODO Auto-generated method stub
+		return hotelRepository.findAllHotelsByName(hotelname);
+	}
+
 
 }

@@ -17,7 +17,7 @@ public class HotelRatingServiceImpl implements HotelRatingService {
 	private HotelRatingRepository hotelratingRepository;
 	
 	@Override
-	public List<HotelRating> getAllBills() {
+	public List<HotelRating> getAllHotelRatings() {
 		// TODO Auto-generated method stub
 		return hotelratingRepository.findAll();
 	}
@@ -35,7 +35,7 @@ public class HotelRatingServiceImpl implements HotelRatingService {
 	}
 
 	@Override
-	public void updateHotelRating(HotelRating hotelRating, long id) {
+	public void updateHotelRating(long id, HotelRating hotelRating) {
 		Optional<HotelRating> optional = hotelratingRepository.findById(id);
 		HotelRating h = null;
 		if(optional.isPresent()) {
@@ -43,7 +43,6 @@ public class HotelRatingServiceImpl implements HotelRatingService {
 			h.setHotelratingId(hotelRating.getHotelratingId());
 			h.setHotel(hotelRating.getHotel());
 			h.setCustomer(hotelRating.getCustomer());
-		
 			hotelratingRepository.save(h);
 		}else {
 			throw new RuntimeException("HotelRating not found");

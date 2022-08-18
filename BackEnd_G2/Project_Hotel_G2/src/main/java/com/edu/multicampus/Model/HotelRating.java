@@ -12,11 +12,11 @@ public class HotelRating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long hotelratingId;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_hotel",nullable=false)
     private Hotel hotel;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

@@ -8,7 +8,7 @@ import java.util.Optional;
 import com.edu.multicampus.Model.Orders;
 
 
-public class OrdersService {
+public interface OrdersService {
 	public interface OrderService {
 	    List<Orders> getAllOrders();
 
@@ -16,7 +16,7 @@ public class OrdersService {
 
 	    void addOrder(Orders order);
 
-	    void updateOrder(Orders order, long id);
+	    void updateOrder(long id, Orders order);
 
 	    void deleteOrder(long id);
 

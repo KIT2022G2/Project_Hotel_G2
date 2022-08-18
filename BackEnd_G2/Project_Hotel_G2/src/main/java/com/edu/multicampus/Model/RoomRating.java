@@ -1,5 +1,5 @@
 package com.edu.multicampus.Model;
-import javax.persistence.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,11 +20,11 @@ public class RoomRating {
     
     private String rating;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_room",nullable=false)
     private Room room;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

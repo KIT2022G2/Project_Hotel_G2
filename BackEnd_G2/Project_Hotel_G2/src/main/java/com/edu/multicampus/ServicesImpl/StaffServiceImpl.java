@@ -35,7 +35,7 @@ public class StaffServiceImpl implements StaffService{
 	}
 
 	@Override
-	public void updateStaff(Staff staff, long id) {
+	public void updateStaff(long id, Staff staff) {
 		Optional<Staff> optional = staffRepository.findById(id);
 		Staff s = null;
 		if(optional.isPresent()) {

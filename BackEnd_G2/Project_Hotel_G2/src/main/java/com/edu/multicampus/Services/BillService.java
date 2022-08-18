@@ -12,7 +12,7 @@ public interface BillService {
 	
 	void addBill(Bill bill);
 	
-	void updateBill(Bill bill, long id);
+	void updateBill( long id,Bill bill);
 	
 	void deleteBill(long id);
 }

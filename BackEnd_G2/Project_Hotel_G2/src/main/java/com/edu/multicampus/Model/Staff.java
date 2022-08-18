@@ -12,29 +12,40 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
 @Entity
 @Table(name="staff")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Staff {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private Long staffId;
 	
-	@Column(name="staffname",nullable=false)
+	@Column(name="staffName",nullable=false)
 	private String staffName;
 	
-	@Column(name="staffusername",nullable=false)
+	@Column(name="staffUserName",nullable=false)
 	private String staffUserName;
 	
-	@Column(name="staffpassword",nullable=false)
+	@Column(name="staffPassword",nullable=false)
 	private String staffPassword;
 	
 	@OneToMany(mappedBy="staff", cascade = CascadeType.ALL)
+	@JsonIgnore
 	private List<Bill> bill;
 	
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="code_staff",nullable=false)
+    @ManyToOne
+    @JoinColumn(name="code_hotel",nullable=false)
     private Hotel hotel;
 }

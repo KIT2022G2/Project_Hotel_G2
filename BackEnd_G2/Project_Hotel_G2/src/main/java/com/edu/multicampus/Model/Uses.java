@@ -17,12 +17,12 @@ public class Uses {
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date time;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_room",nullable=false)
     private Room room;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_service",nullable=false)
-    private Service service;
+    private Services service;
     
 }

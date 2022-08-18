@@ -12,6 +12,7 @@ import com.edu.multicampus.Services.BillService;
 
 @Service
 public class BillServiceImpl implements BillService{
+	
 	@Autowired
 	private BillRepository billRepository;
 	
@@ -33,14 +34,13 @@ public class BillServiceImpl implements BillService{
 	}
 
 	@Override
-	public void updateBill(Bill bill, long id) {
+	public void updateBill( long id,Bill bill) {
 		Optional<Bill> optional = billRepository.findById(id);
 		Bill b = null;
 		if(optional.isPresent()) {
 			b = optional.get();
 			b.setCheckinDate(bill.getCheckinDate());
 			b.setCheckoutDate(bill.getCheckoutDate());
-			b.setDateTime(bill.getDateTime());
 			b.setStatus(bill.isStatus());
 			b.setStaff(bill.getStaff());
 			b.setCustomer(bill.getCustomer());

@@ -1,6 +1,7 @@
 package com.edu.multicampus.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 
@@ -11,7 +12,7 @@ public interface RoomService {
 	List<Room> getAllRooms();
 	int addRoom(Room room);
 	int deleteRoomById (long id);
-	Room getRoomById (long id);
+	Optional<Room> getRoomById (long id);
 	Page<Room> findRoomPaginated(int pageNo, int pageSize);
 	int updateRoomById (long id, Room room);
 }

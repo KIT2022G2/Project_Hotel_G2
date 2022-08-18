@@ -7,7 +7,8 @@ import lombok.Setter;
 
 import java.sql.Date;
 
-import javax.persistence.CascadeType;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,19 +34,16 @@ public class Bill {
     private Date checkinDate;
 
     @Column(columnDefinition = "DATE")
-    private Date dateTime;
-
-    @Column(columnDefinition = "DATE")
     private Date checkoutDate;
     
     @Column(columnDefinition = "boolean default false")
     private boolean status;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_staff",nullable=false)
     private Staff staff;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
 }

@@ -7,13 +7,13 @@ import java.util.Optional;
 import com.edu.multicampus.Model.HotelRating;
 
 public interface HotelRatingService {
-	List<HotelRating> getAllBills();
+	List<HotelRating> getAllHotelRatings();
 	
 	Optional<HotelRating> getHotelRatingById(long id);
 	
 	void addHotelRating(HotelRating hotelRating);
 	
-	void updateHotelRating(HotelRating hotelRating, long id);
+	void updateHotelRating(long id, HotelRating hotelRating) ;
 	
 	void deleteHotelRating(long id);
 }

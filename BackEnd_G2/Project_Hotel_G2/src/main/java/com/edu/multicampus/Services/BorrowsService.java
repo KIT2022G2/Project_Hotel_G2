@@ -8,13 +8,13 @@ import com.edu.multicampus.Model.Borrows;
 public interface BorrowsService {
 	List<Borrows> getAllBorrows();
 	
-	Optional<Borrows> getBorrowsById(long id);
+	Optional<Borrows> getBorrowById(long id);
 	
-	void addBorrows(Borrows borrows);
+	void addBorrow(Borrows borrows);
 	
-	void updateBorrows(Borrows borrows, long id);
+	void updateBorrow(long id, Borrows borrows);
 	
-	void deleteBorrows(long id);
+	void deleteBorrow(long id);
 }
 
 

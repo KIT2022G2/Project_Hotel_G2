@@ -1,16 +1,17 @@
 package com.edu.multicampus.Services;
 
-import com.edu.multicampus.Model.Service;
+import com.edu.multicampus.Model.Services;
 import java.util.List;
+import java.util.Optional;
 
 public interface ServiceService {
-	List<Service> findAllService();
+	List<Services> findAllService();
 	
-	Service getServiceById(long id);
+	Optional<Services> getServiceById(long id);
 	
-	void addService(Service service, long id);
+	void addService(Services service);
 	
-	void updateService(Service service, long id);
+	void updateService( long id, Services service);
 	
 	void deleteService(long id);
 	

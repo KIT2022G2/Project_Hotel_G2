@@ -1,9 +1,5 @@
 package com.edu.multicampus.Controller;
 
-
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +11,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api")
 public class CustomerController {
     @Autowired
     CustomerService customerService;
@@ -31,17 +27,18 @@ public class CustomerController {
     }
 
     @PostMapping("/customer")
-    void addCustomer(@RequestBody Customer customer){
+    public void addCustomer(@RequestBody Customer customer){
         customerService.addCustomer(customer);
     }
     
     @PutMapping("/customer/{id}")
-    void updateCustomer(@PathVariable long id, @RequestBody Customer customer) {
+    public void updateCustomer(@PathVariable long id, @RequestBody Customer customer) {
     	customerService.updateCustomer(id, customer);
     }
     
     @DeleteMapping("/customer/{id}")
-    void deleteCustomer(@PathVariable long id){
+    public void deleteCustomer(@PathVariable long id){
         customerService.deleteCustomer(id);
     }
+    
 }

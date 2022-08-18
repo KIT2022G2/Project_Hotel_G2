@@ -12,7 +12,7 @@ public interface StaffService {
 	
 	void addStaff(Staff staff);
 	
-	void updateStaff(Staff staff,long id);
+	void updateStaff(long id, Staff staff);
 	
 	void deleteStaff(long id);
 	

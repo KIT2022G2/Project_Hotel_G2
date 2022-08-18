@@ -18,19 +18,16 @@ public class Borrows {
     private Date checkinDate;
 
     @Column(columnDefinition = "DATE")
-    private Date datetime;
-
-    @Column(columnDefinition = "DATE")
     private Date checkoutDate;
 
     @Column(columnDefinition = "boolean default false")
     private boolean status;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_room_borrow",nullable=false)
     private Room room;
     
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="code_customer",nullable=false)
     private Customer customer;
    
