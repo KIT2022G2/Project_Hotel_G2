@@ -2,14 +2,11 @@ package com.edu.multicampus.Services;
 
 import java.util.List;
 import java.util.Optional;
-
-
-
 import com.edu.multicampus.Model.Orders;
 
 
-public interface OrdersService {
-	public interface OrderService {
+
+	public interface OrdersService {
 	    List<Orders> getAllOrders();
 
 	    Optional<Orders> getOrderById(long id);
@@ -21,4 +18,4 @@ public interface OrdersService {
 	    void deleteOrder(long id);
 
 	}
-}
+

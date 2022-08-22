@@ -47,6 +47,7 @@ public class RoomController {
 	public void deleteRoom(@PathVariable long id) {
 		roomservice.deleteRoomById(id);
 	}
+	
 	@GetMapping("/room/roomname/{roomName}")
 	public List<Room> getAllRoomsByName(@PathVariable String roomName){
 		return roomservice.getAllRoomsByName(roomName);

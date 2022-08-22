@@ -41,6 +41,8 @@ public class UsesServicesImpl implements UsesService{
 		if(optional.isPresent()) {
 			u = optional.get();
 			u.setService(uses.getService());
+			u.setUsesQuantity(uses.getUsesQuantity());
+			u.setUsesCost(uses.getUsesCost());
 			u.setTime(uses.getTime());
 			u.setRoom(uses.getRoom());
 			usesRepository.save(u);

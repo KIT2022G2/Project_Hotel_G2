@@ -3,6 +3,7 @@ package com.edu.multicampus.ServicesImpl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.edu.multicampus.Model.Services;
@@ -11,6 +12,7 @@ import com.edu.multicampus.Services.ServiceService;
 
 @Service
 public class ServiceServiceImpl implements ServiceService {
+	@Autowired
 	ServiceRepository serviceRepository;
 	
 	@Override

@@ -9,12 +9,14 @@ import org.springframework.stereotype.Service;
 
 import com.edu.multicampus.Model.Orders;
 import com.edu.multicampus.Repository.OrderRepository;
-import com.edu.multicampus.Services.OrdersService.OrderService;
+import com.edu.multicampus.Services.OrdersService;
+
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl implements OrdersService {
 	@Autowired
 	private OrderRepository orderRepository;
+	
 	@Override
 	public List<Orders> getAllOrders() {
 		return orderRepository.findAll();

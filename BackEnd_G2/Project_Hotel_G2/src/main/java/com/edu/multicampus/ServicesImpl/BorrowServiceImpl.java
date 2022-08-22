@@ -3,6 +3,7 @@ package com.edu.multicampus.ServicesImpl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.edu.multicampus.Model.Borrows;
@@ -12,6 +13,7 @@ import com.edu.multicampus.Services.BorrowsService;
 @Service
 public class BorrowServiceImpl implements BorrowsService {
 	
+	@Autowired
 	private BorrowRepository borrowRepository;
 	
 	@Override
