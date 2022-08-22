@@ -17,6 +17,10 @@ public class Uses {
     @Column(columnDefinition = "DATE DEFAULT (CURRENT_DATE)")
     private Date time;
     
+    private float usesCost;
+    
+    private float usesQuantity;
+    
     @ManyToOne
     @JoinColumn(name="code_room",nullable=false)
     private Room room;

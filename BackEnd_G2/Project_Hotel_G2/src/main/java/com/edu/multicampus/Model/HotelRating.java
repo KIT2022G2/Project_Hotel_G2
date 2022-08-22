@@ -12,6 +12,10 @@ public class HotelRating {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long hotelratingId;
     
+    private String image;
+    
+    private String comment;
+    
     @ManyToOne
     @JoinColumn(name="code_hotel",nullable=false)
     private Hotel hotel;

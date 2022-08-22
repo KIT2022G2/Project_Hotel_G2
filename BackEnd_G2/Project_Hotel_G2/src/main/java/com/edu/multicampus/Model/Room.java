@@ -17,9 +17,9 @@ public class Room {
 	
 	private String roomName;
 	
-	private int roomPrice;
+	private float roomPrice;
 	
-	private int roomSize;
+	private float roomSize;
 	
 	private String roomImageURl;
 	

@@ -78,4 +78,12 @@ public class RoomServiceImpl implements RoomService {
 		return 0;
 	}
 
+	@Override
+	public List<Room> getAllRoomsByName(String nameRoom) {
+		// TODO Auto-generated method stub
+		return roomRepository.findAllRoomsByName(nameRoom);
+	}
+
+
+
 }

@@ -40,8 +40,6 @@ public class ServiceServiceImpl implements ServiceService {
 			s = optional.get();
 			s.setServiceName(service.getServiceName());
 			s.setServicePrice(service.getServicePrice());
-			s.setAmount(service.getAmount());
-			s.setTotal(service.getTotal());
 			s.setUse(service.getUse());
 			serviceRepository.save(s);
 		}else {

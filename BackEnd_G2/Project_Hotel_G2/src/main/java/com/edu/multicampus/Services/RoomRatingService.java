@@ -9,10 +9,9 @@ import com.edu.multicampus.Model.RoomRating;
 
 public interface RoomRatingService {
 	List<RoomRating> getAllRoomRating();
-	int addRoomRating(RoomRating roomRating);
-	int deleteRoomRatingById (long id);
+	void addRoomRating(RoomRating roomRating);
+	void deleteRoomRatingById (long id);
 	Optional<RoomRating> getRoomRatingById (long id);
-	Page<RoomRating> findRoomRatingPaginated(int pageNo, int pageSize);
-	int updateRoomRatingById (long id, RoomRating roomRating);
+	void updateRoomRatingById (long id, RoomRating roomRating);
 }
 

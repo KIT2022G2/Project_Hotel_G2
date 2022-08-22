@@ -17,11 +17,7 @@ public class Services {
     
     private String serviceName;
     
-    private int servicePrice;
-    
-    private int amount;
-    
-    private int total;
+    private float servicePrice;
     
     @OneToMany(mappedBy="service")
     @JsonIgnore

@@ -41,6 +41,8 @@ public class HotelRatingServiceImpl implements HotelRatingService {
 		if(optional.isPresent()) {
 			h = optional.get();
 			h.setHotelratingId(hotelRating.getHotelratingId());
+			h.setImage(hotelRating.getImage());
+			h.setComment(hotelRating.getComment());
 			h.setHotel(hotelRating.getHotel());
 			h.setCustomer(hotelRating.getCustomer());
 			hotelratingRepository.save(h);

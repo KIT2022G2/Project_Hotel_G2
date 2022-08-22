@@ -10,6 +10,7 @@ import com.edu.multicampus.Model.Room;
 
 public interface RoomService {
 	List<Room> getAllRooms();
+	List<Room> getAllRoomsByName(String nameRoom);
 	int addRoom(Room room);
 	int deleteRoomById (long id);
 	Optional<Room> getRoomById (long id);
